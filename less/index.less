@@ -24,6 +24,27 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
+/* Variables */
+
+@skill-point-color: #93E1D8;
+@skill-empty-color: #DDFFF7;
+@row-highlight-color: #1D1A31;
+
+/* Mixins */
+
+.flex-even {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.flex-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -54,6 +75,58 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	width: 80%;
+	margin: 0 auto;
+	
+	.skills {
+		color: white;
+		box-shadow: 0px 5px 5px grey;
+		width: 350px;
+		overflow: hidden;
+		border-radius: 20px;
+		background-color: @row-highlight-color;
+
+		.odd-row {
+			background-color: darken(@row-highlight-color, 10%);
+		}
+
+		.skill-row {
+			.flex-even();
+			padding: 10px 5px;
+
+
+			.skill-name {
+				width: 50%;
+	
+				h3 {
+					width: 100%;
+					text-align: center;
+				}
+			}
+	
+			.skill-level {
+				.flex-even();
+				width: 50%;
+	
+				.skill {
+					padding: 10px;
+					border: 1px solid darken(@skill-point-color, 10%);
+					border-radius: 50%;
+				}
+	
+				.point {
+					background-color: @skill-point-color;
+				}
+	
+				.empty {
+					background-color: @skill-empty-color;
+					border-color: darken(@skill-empty-color, 10%);
+				}
+			}
+		}
+	}
+
+	
 }
 
