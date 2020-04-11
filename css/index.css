@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Ubuntu Regular'), local('Ubuntu-Regular'), url(https://fonts.gstatic.com/s/ubuntu/v14/4iCs6KVjbNBYlgo6eA.ttf) format('truetype');
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -92,6 +99,15 @@ video {
 }
 /* Variables */
 /* Mixins */
+.border-radius-full {
+  border-radius: 10px;
+}
+.border-radius-top {
+  border-radius: 10px 10px 0 0;
+}
+.border-radius-bottom {
+  border-radius: 0 0 10px 10px;
+}
 .flex-even {
   display: flex;
   justify-content: space-evenly;
@@ -142,60 +158,61 @@ table {
 * {
   box-sizing: border-box;
 }
-html,
+/* General Styles */
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Ubuntu', sans-serif;
+}
+/* Page Styles */
 body {
   height: 100%;
   width: 80%;
   margin: 0 auto;
+  background: #434156;
 }
-html .skills,
 body .skills {
   color: white;
-  box-shadow: 0px 5px 5px grey;
+  box-shadow: 0px 5px 5px #1D1A31;
   width: 350px;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: #1D1A31;
 }
-html .skills .odd-row,
 body .skills .odd-row {
   background-color: #090810;
 }
-html .skills .skill-row,
 body .skills .skill-row {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: 10px 5px;
 }
-html .skills .skill-row .skill-name,
 body .skills .skill-row .skill-name {
   width: 50%;
 }
-html .skills .skill-row .skill-name h3,
 body .skills .skill-row .skill-name h3 {
   width: 100%;
   text-align: center;
 }
-html .skills .skill-row .skill-level,
 body .skills .skill-row .skill-level {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 50%;
 }
-html .skills .skill-row .skill-level .skill,
 body .skills .skill-row .skill-level .skill {
   padding: 10px;
-  border: 1px solid #6bd6ca;
+  border: 1px solid #dd5245;
   border-radius: 50%;
 }
-html .skills .skill-row .skill-level .point,
 body .skills .skill-row .skill-level .point {
-  background-color: #93E1D8;
+  background-color: #E57A70;
+  border-color: white;
 }
-html .skills .skill-row .skill-level .empty,
 body .skills .skill-row .skill-level .empty {
-  background-color: #DDFFF7;
-  border-color: #aaffeb;
+  background-color: #fdf2f1;
+  border-color: #eda29b;
 }
