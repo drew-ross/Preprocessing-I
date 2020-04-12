@@ -214,6 +214,13 @@ body {
   margin: 0 auto;
   background: #434156;
 }
+body .break {
+  width: 100%;
+  height: 1px;
+  opacity: 0.2;
+  border: 1px solid black;
+  margin: 40px 0 0 0;
+}
 body nav {
   display: flex;
   flex-direction: column;
