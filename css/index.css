@@ -1,4 +1,18 @@
 @font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xK3dSBYKcSV-LCoeQqfX1RYOo3aPw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Ubuntu Light'), local('Ubuntu-Light'), url(https://fonts.gstatic.com/s/ubuntu/v14/4iCv6KVjbNBYlgoC1CzTtw.ttf) format('truetype');
+}
+@font-face {
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
@@ -100,23 +114,25 @@ video {
 /* Variables */
 /* Mixins */
 .border-radius-full {
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .border-radius-top {
-  border-radius: 10px 10px 0 0;
+  border-radius: 5px 5px 0 0;
 }
 .border-radius-bottom {
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 5px 5px;
 }
 .flex-even {
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
 }
-.flex-between {
+.flex-column {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -154,17 +170,42 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* Set every element's box-sizing to border-box */
+/* Global Styles */
 * {
   box-sizing: border-box;
 }
+html {
+  font-size: 62.5%;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+}
 /* General Styles */
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
   font-family: 'Ubuntu', sans-serif;
+}
+h1 {
+  font-size: 3rem;
+  margin: 20px 0;
+}
+h2 {
+  font-size: 2.2rem;
+  margin: 15px 0;
+}
+h3,
+nav ul li {
+  font-size: 1.8rem;
+}
+p,
+a,
+img {
+  font-size: 1.6rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.4;
 }
 /* Page Styles */
 body {
@@ -173,46 +214,80 @@ body {
   margin: 0 auto;
   background: #434156;
 }
-body .skills {
+body nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px 0 80px 0;
+}
+body nav div {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+body nav .navigation {
+  margin-top: 20px;
+}
+body nav .navigation ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 50%;
+  margin: 0 auto;
+}
+body .page-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+body .page-top .container {
+  width: 40%;
+}
+body .page-top .skills {
   color: white;
-  box-shadow: 0px 5px 5px #1D1A31;
-  width: 350px;
+  box-shadow: 0px 0px 5px #1D1A31;
+  width: 400px;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: #1D1A31;
 }
-body .skills .odd-row {
-  background-color: #090810;
+body .page-top .skills .odd-row {
+  background-color: #151324;
 }
-body .skills .skill-row {
+body .page-top .skills .skill-row {
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
   padding: 10px 5px;
 }
-body .skills .skill-row .skill-name {
+body .page-top .skills .skill-row .skill-name {
   width: 50%;
 }
-body .skills .skill-row .skill-name h3 {
+body .page-top .skills .skill-row .skill-name h3 {
   width: 100%;
   text-align: center;
 }
-body .skills .skill-row .skill-level {
+body .page-top .skills .skill-row .skill-level {
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
   width: 50%;
 }
-body .skills .skill-row .skill-level .skill {
+body .page-top .skills .skill-row .skill-level .skill {
   padding: 10px;
   border: 1px solid #dd5245;
   border-radius: 50%;
 }
-body .skills .skill-row .skill-level .point {
+body .page-top .skills .skill-row .skill-level .point {
   background-color: #E57A70;
   border-color: white;
 }
-body .skills .skill-row .skill-level .empty {
+body .page-top .skills .skill-row .skill-level .empty {
   background-color: #fdf2f1;
   border-color: #eda29b;
 }

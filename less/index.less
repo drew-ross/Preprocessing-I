@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Ubuntu:wght@300;400&display=swap');
 
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -34,7 +34,8 @@ time, mark, audio, video {
 @skill-point-color: #E57A70;
 @row-highlight-color: #1D1A31;
 @font-header: 'Ubuntu', sans-serif;
-@border-radius: 10px;
+@font-text: 'Source Sans Pro', sans-serif;
+@border-radius: 5px;
 
 /* Mixins */
 
@@ -52,14 +53,16 @@ time, mark, audio, video {
 
 .flex-even {
 	display: flex;
+	flex-direction: row;
 	justify-content: space-evenly;
-	align-items: center;
+	align-items: flex-start;
 }
 
-.flex-between {
+.flex-column {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
 	align-items: center;
+	justify-content: space-evenly;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -86,18 +89,42 @@ table {
 	border-spacing: 0;
 }
 
-/* Set every element's box-sizing to border-box */
+/* Global Styles */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+	color: white;
+	font-family: @font-text;
 }
 
 
 /* General Styles */
 
-h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
 	font-family: @font-header;
 }
 
+h1 {
+	font-size: 3rem;
+	margin: 20px 0;
+}
+
+h2 {
+	font-size: 2.2rem;
+	margin: 15px 0;
+}
+
+h3, nav ul li {
+	font-size: 1.8rem;
+}
+
+p, a, img {
+	font-size: 1.6rem;
+	font-family: @font-text;
+	line-height: 1.4;
+}
 /* Page Styles */
 
 body {
@@ -106,54 +133,89 @@ body {
 	margin: 0 auto;
 	background: @background-color;
 
-	.skills {
-		color: white;
-		box-shadow: 0px 5px 5px @shadow-color;
-		width: 350px;
-		overflow: hidden;
-		.border-radius-full();
-		background-color: @row-highlight-color;
+	nav {
+		.flex-column();
+		margin: 20px 0 80px 0;
 
-		.odd-row {
-			background-color: darken(@row-highlight-color, 10%);
+		div {
+			width: 100%;
+			margin: 0 auto;
+			text-align: center;
 		}
+		.navigation {
 
-		.skill-row {
-			.flex-even();
-			padding: 10px 5px;
+			margin-top: 20px;
 
-
-			.skill-name {
-				width: 50%;
-	
-				h3 {
-					width: 100%;
-					text-align: center;
-				}
-			}
-	
-			.skill-level {
+			ul {
 				.flex-even();
 				width: 50%;
-	
-				.skill {
-					padding: 10px;
-					border: 1px solid darken(@skill-point-color, 10%);
-					border-radius: 50%;
-				}
-	
-				.point {
-					background-color: @skill-point-color;
-					border-color: white;
-				}
-	
-				.empty {
-					background-color: lighten(@skill-point-color, 30%);
-					border-color: lighten(@skill-point-color, 10%);
+				margin: 0 auto;
+			
+				li:hover {
+					
 				}
 			}
 		}
 	}
+
+	.page-top {
+		.flex-even();
+
+		.container {
+			width: 40%;
+		}
+
+		.skills {
+			color: white;
+			box-shadow: 0px 0px 5px @shadow-color;
+			width: 400px;
+			overflow: hidden;
+			.border-radius-full();
+			background-color: @row-highlight-color;
+	
+			.odd-row {
+				background-color: darken(@row-highlight-color, 4%);
+			}
+	
+			.skill-row {
+				.flex-even();
+				padding: 10px 5px;
+	
+	
+				.skill-name {
+					width: 50%;
+		
+					h3 {
+						width: 100%;
+						text-align: center;
+					}
+				}
+		
+				.skill-level {
+					.flex-even();
+					width: 50%;
+		
+					.skill {
+						padding: 10px;
+						border: 1px solid darken(@skill-point-color, 10%);
+						border-radius: 50%;
+					}
+		
+					.point {
+						background-color: @skill-point-color;
+						border-color: white;
+					}
+		
+					.empty {
+						background-color: lighten(@skill-point-color, 30%);
+						border-color: lighten(@skill-point-color, 10%);
+					}
+				}
+			}
+		}
+	
+	}
+
 
 	
 }
