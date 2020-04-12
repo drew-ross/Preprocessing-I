@@ -130,11 +130,15 @@ p, img {
 a {
 	text-decoration: none;
 	color: @font-color;
+					
+	&:hover {
+		color: @skill-point-color;
+		}
 }
 /* Page Styles */
 
 body {
-	height: 100%;
+	min-height: 90vh;
 	width: 80%;
 	margin: 0 auto;
 	background: @background-color;
@@ -172,13 +176,14 @@ body {
 			
 				li a {
 					font-size: 2rem;
-					
-					&:hover {
-					color: @skill-point-color;
-					}
+
 				}
 			}
 		}
+	}
+
+	.main {
+		min-height: calc(100vh - 380px);
 	}
 
 	.main-content {
@@ -238,9 +243,20 @@ body {
 	
 	}
 
+	.contact-content {
+		text-align: center;
+
+		h3 {
+			margin: 15px 0;
+		}
+		a {
+			font-size: 1.8rem;
+		}
+	}
+
 	footer {
 		width: 100%;
-		margin: 0 auto;
+		margin: 50px 0;
 		text-align: center;
 	}
 	
