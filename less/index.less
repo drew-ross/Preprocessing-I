@@ -55,7 +55,7 @@ time, mark, audio, video {
 .flex-even {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: flex-start;
 }
 
@@ -143,6 +143,26 @@ body {
 	margin: 0 auto;
 	background: @background-color;
 
+	section {
+		margin-bottom: 60px;
+	}
+
+	.half-container {
+		width: 45%;
+	}
+
+	.full-container {
+		width: 100%;
+	}
+
+	.row {
+		margin: 20px 0;
+
+		.row-company {
+			color: @skill-point-color;
+		}
+	}
+
 	.break {
 		display: block;
 		width: 100%;
@@ -186,12 +206,8 @@ body {
 		min-height: calc(100vh - 380px);
 	}
 
-	.main-content {
+	.two-panel {
 		.flex-even();
-
-		.container {
-			width: 40%;
-		}
 
 		.skills {
 			box-shadow: 0px 0px 5px @shadow-color;
@@ -220,7 +236,8 @@ body {
 		
 				.skill-level {
 					.flex-even();
-					width: 50%;
+					width: 40%;
+					padding-right: 10px;
 		
 					.skill {
 						padding: 10px;
