@@ -156,7 +156,7 @@ body {
 		display: none;
 	}
 
-	nav {
+	header {
 		.flex-column();
 		margin: 20px 0 80px 0;
 
@@ -165,8 +165,8 @@ body {
 			margin: 0 auto;
 			text-align: center;
 		}
-		.navigation {
-
+		nav {
+			width: 100%;
 			margin-top: 20px;
 
 			ul {
@@ -234,6 +234,7 @@ body {
 					}
 		
 					.empty {
+						// opacity: 1;
 						background-color: lighten(@skill-point-color, 30%);
 						border-color: lighten(@skill-point-color, 10%);
 					}
