@@ -29,10 +29,10 @@ time, mark, audio, video {
 
 /* Variables */
 
-@background-color: #434156;
-@shadow-color: #1D1A31;
-@tech-point-color: #E57A70;
-@row-highlight-color: #1D1A31;
+@color-background: #434156;
+@color-shadow: #1D1A31;
+@color-text-highlight: #E57A70;
+@color-row-highlight: #312e45;
 @font-header: 'Ubuntu', sans-serif;
 @font-text: 'Source Sans Pro', sans-serif;
 @font-color: white;
@@ -41,6 +41,7 @@ time, mark, audio, video {
 // Screen sizes
 
 @screen-tablet-max: 800px;
+@screen-mobile-max: 500px;
 
 // Mixins
 
@@ -137,7 +138,7 @@ a {
 	color: @font-color;
 					
 	&:hover {
-		color: @tech-point-color;
+		color: @color-text-highlight;
 		}
 }
 /* Page Styles */
@@ -146,7 +147,7 @@ body {
 	min-height: 90vh;
 	width: 80%;
 	margin: 0 auto;
-	background: @background-color;
+	background: @color-background;
 }
 
 section {
@@ -169,7 +170,7 @@ section {
 	margin: 20px 0;
 
 	.row-company {
-		color: @tech-point-color;
+		color: @color-text-highlight;
 	}
 }
 
@@ -222,21 +223,28 @@ header {
 	}
 
 	.technologies {
-		box-shadow: 0px 0px 5px @shadow-color;
+		box-shadow: 0px 0px 5px @color-shadow;
 		width: 400px;
 		overflow: hidden;
 		.border-radius-full();
-		background-color: @row-highlight-color;
+		
 		@media (max-width: 920px) {
 			width: 350px;
 		}
+		@media (max-width: @screen-mobile-max) {
+			width: 100%;
+		}
 		.odd-row {
-			background-color: darken(@row-highlight-color, 4%);
+			background-color: @color-row-highlight;
 		}
 
 		.tech-row {
 			.flex-even();
 			padding: 10px 5px;
+			
+			@media (max-width: @screen-mobile-max) {
+				justify-content: center;
+			}
 
 			.tech-name {
 				width: 50%;
@@ -255,19 +263,19 @@ header {
 				.tech {
 					margin: 0 2px;
 					padding: 10px;
-					border: 1px solid darken(@tech-point-color, 10%);
+					border: 1px solid darken(@color-text-highlight, 10%);
 					border-radius: 50%;
 				}
 	
 				.point {
-					background-color: @tech-point-color;
+					background-color: @color-text-highlight;
 					border-color: white;
 				}
 	
 				.empty {
 					opacity: .2;
-					background-color: lighten(@tech-point-color, 30%);
-					border-color: lighten(@tech-point-color, 10%);
+					background-color: lighten(@color-text-highlight, 30%);
+					border-color: lighten(@color-text-highlight, 10%);
 				}
 			}
 		}

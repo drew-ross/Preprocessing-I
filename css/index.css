@@ -301,15 +301,19 @@ header nav ul li a {
   width: 400px;
   overflow: hidden;
   border-radius: 5px;
-  background-color: #1D1A31;
 }
 @media (max-width: 920px) {
   .two-panel .technologies {
     width: 350px;
   }
 }
+@media (max-width: 500px) {
+  .two-panel .technologies {
+    width: 100%;
+  }
+}
 .two-panel .technologies .odd-row {
-  background-color: #151324;
+  background-color: #312e45;
 }
 .two-panel .technologies .tech-row {
   display: flex;
@@ -317,6 +321,11 @@ header nav ul li a {
   justify-content: space-between;
   align-items: flex-start;
   padding: 10px 5px;
+}
+@media (max-width: 500px) {
+  .two-panel .technologies .tech-row {
+    justify-content: center;
+  }
 }
 .two-panel .technologies .tech-row .tech-name {
   width: 50%;
