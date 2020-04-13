@@ -143,142 +143,138 @@ body {
 	width: 80%;
 	margin: 0 auto;
 	background: @background-color;
-
-	section {
-		margin-bottom: 60px;
-	}
-
-	.half-container {
-		width: 45%;
-	}
-
-	.full-container {
-		width: 100%;
-	}
-
-	.row {
-		margin: 20px 0;
-
-		.row-company {
-			color: @tech-point-color;
-		}
-	}
-
-	.break {
-		display: block;
-		width: 100%;
-		height: 1px;
-		opacity: .2;
-		border: 1px solid black;
-		margin: 40px 0 0 0;
-	}
-
-	.hide {
-		display: none;
-	}
-
-	header {
-		.flex-column();
-		margin: 20px 0 80px 0;
-
-		div {
-			width: 100%;
-			margin: 0 auto;
-			text-align: center;
-		}
-		nav {
-			width: 100%;
-			margin-top: 20px;
-
-			ul {
-				.flex-even();
-				width: 50%;
-				margin: 0 auto;
-			
-				li a {
-					font-size: 2rem;
-
-				}
-			}
-		}
-	}
-
-	.main {
-		min-height: calc(100vh - 380px);
-	}
-
-	.two-panel {
-		.flex-even();
-
-		.technologies {
-			box-shadow: 0px 0px 5px @shadow-color;
-			width: 400px;
-			overflow: hidden;
-			.border-radius-full();
-			background-color: @row-highlight-color;
-	
-			.odd-row {
-				background-color: darken(@row-highlight-color, 4%);
-			}
-	
-			.tech-row {
-				.flex-even();
-				padding: 10px 5px;
-	
-	
-				.tech-name {
-					width: 50%;
-		
-					h3 {
-						margin: 0;
-						width: 100%;
-						text-align: center;
-					}
-				}
-		
-				.tech-level {
-					.flex-even();
-					width: 40%;
-					padding-right: 10px;
-		
-					.tech {
-						padding: 10px;
-						border: 1px solid darken(@tech-point-color, 10%);
-						border-radius: 50%;
-					}
-		
-					.point {
-						background-color: @tech-point-color;
-						border-color: white;
-					}
-		
-					.empty {
-						// opacity: 1;
-						background-color: lighten(@tech-point-color, 30%);
-						border-color: lighten(@tech-point-color, 10%);
-					}
-				}
-			}
-		}
-	}
-
-	.contact-content {
-		text-align: center;
-
-		a {
-			font-size: 1.8rem;
-		}
-	}
-
-	footer {
-		width: 100%;
-		margin: 50px 0;
-		text-align: center;
-
-		small {
-			font-size: 1.5rem;
-		}
-	}
-	
 }
 
+section {
+	margin-bottom: 60px;
+}
+
+.half-container {
+	width: 45%;
+}
+
+.full-container {
+	width: 100%;
+}
+
+.row {
+	margin: 20px 0;
+
+	.row-company {
+		color: @tech-point-color;
+	}
+}
+
+.break {
+	display: block;
+	width: 100%;
+	height: 1px;
+	opacity: .2;
+	border: 1px solid black;
+	margin: 40px 0 0 0;
+}
+
+.hide {
+	display: none;
+}
+
+header {
+	.flex-column();
+	margin: 20px 0 80px 0;
+
+	div {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	nav {
+		width: 100%;
+		margin-top: 20px;
+
+		ul {
+			.flex-even();
+			width: 50%;
+			margin: 0 auto;
+		
+			li a {
+				font-size: 2rem;
+			}
+		}
+	}
+}
+
+.main {
+	min-height: calc(100vh - 380px);
+}
+
+.two-panel {
+	.flex-even();
+
+	.technologies {
+		box-shadow: 0px 0px 5px @shadow-color;
+		width: 400px;
+		overflow: hidden;
+		.border-radius-full();
+		background-color: @row-highlight-color;
+
+		.odd-row {
+			background-color: darken(@row-highlight-color, 4%);
+		}
+
+		.tech-row {
+			.flex-even();
+			padding: 10px 5px;
+
+			.tech-name {
+				width: 50%;
+	
+				h3 {
+					margin: 0;
+					width: 100%;
+					text-align: center;
+				}
+			}
+	
+			.tech-level {
+				.flex-even();
+				width: 40%;
+				padding-right: 10px;
+	
+				.tech {
+					padding: 10px;
+					border: 1px solid darken(@tech-point-color, 10%);
+					border-radius: 50%;
+				}
+	
+				.point {
+					background-color: @tech-point-color;
+					border-color: white;
+				}
+	
+				.empty {
+					// opacity: 1;
+					background-color: lighten(@tech-point-color, 30%);
+					border-color: lighten(@tech-point-color, 10%);
+				}
+			}
+		}
+	}
+}
+
+.contact-content {
+	text-align: center;
+
+	a {
+		font-size: 1.8rem;
+	}
+}
+
+footer {
+	width: 100%;
+	margin: 50px 0;
+	text-align: center;
+
+	small {
+		font-size: 1.5rem;
+	}
+}

@@ -220,22 +220,22 @@ body {
   margin: 0 auto;
   background: #434156;
 }
-body section {
+section {
   margin-bottom: 60px;
 }
-body .half-container {
+.half-container {
   width: 45%;
 }
-body .full-container {
+.full-container {
   width: 100%;
 }
-body .row {
+.row {
   margin: 20px 0;
 }
-body .row .row-company {
+.row .row-company {
   color: #E57A70;
 }
-body .break {
+.break {
   display: block;
   width: 100%;
   height: 1px;
@@ -243,26 +243,26 @@ body .break {
   border: 1px solid black;
   margin: 40px 0 0 0;
 }
-body .hide {
+.hide {
   display: none;
 }
-body header {
+header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   margin: 20px 0 80px 0;
 }
-body header div {
+header div {
   width: 100%;
   margin: 0 auto;
   text-align: center;
 }
-body header nav {
+header nav {
   width: 100%;
   margin-top: 20px;
 }
-body header nav ul {
+header nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -270,44 +270,44 @@ body header nav ul {
   width: 50%;
   margin: 0 auto;
 }
-body header nav ul li a {
+header nav ul li a {
   font-size: 2rem;
 }
-body .main {
+.main {
   min-height: calc(100vh - 380px);
 }
-body .two-panel {
+.two-panel {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
 }
-body .two-panel .technologies {
+.two-panel .technologies {
   box-shadow: 0px 0px 5px #1D1A31;
   width: 400px;
   overflow: hidden;
   border-radius: 5px;
   background-color: #1D1A31;
 }
-body .two-panel .technologies .odd-row {
+.two-panel .technologies .odd-row {
   background-color: #151324;
 }
-body .two-panel .technologies .tech-row {
+.two-panel .technologies .tech-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   padding: 10px 5px;
 }
-body .two-panel .technologies .tech-row .tech-name {
+.two-panel .technologies .tech-row .tech-name {
   width: 50%;
 }
-body .two-panel .technologies .tech-row .tech-name h3 {
+.two-panel .technologies .tech-row .tech-name h3 {
   margin: 0;
   width: 100%;
   text-align: center;
 }
-body .two-panel .technologies .tech-row .tech-level {
+.two-panel .technologies .tech-row .tech-level {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -315,30 +315,30 @@ body .two-panel .technologies .tech-row .tech-level {
   width: 40%;
   padding-right: 10px;
 }
-body .two-panel .technologies .tech-row .tech-level .tech {
+.two-panel .technologies .tech-row .tech-level .tech {
   padding: 10px;
   border: 1px solid #dd5245;
   border-radius: 50%;
 }
-body .two-panel .technologies .tech-row .tech-level .point {
+.two-panel .technologies .tech-row .tech-level .point {
   background-color: #E57A70;
   border-color: white;
 }
-body .two-panel .technologies .tech-row .tech-level .empty {
+.two-panel .technologies .tech-row .tech-level .empty {
   background-color: #fdf2f1;
   border-color: #eda29b;
 }
-body .contact-content {
+.contact-content {
   text-align: center;
 }
-body .contact-content a {
+.contact-content a {
   font-size: 1.8rem;
 }
-body footer {
+footer {
   width: 100%;
   margin: 50px 0;
   text-align: center;
 }
-body footer small {
+footer small {
   font-size: 1.5rem;
 }
