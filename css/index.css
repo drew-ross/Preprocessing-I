@@ -112,27 +112,6 @@ video {
   vertical-align: baseline;
 }
 /* Variables */
-.border-radius-full {
-  border-radius: 5px;
-}
-.border-radius-top {
-  border-radius: 5px 5px 0 0;
-}
-.border-radius-bottom {
-  border-radius: 0 0 5px 5px;
-}
-.flex-even {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
 /* HTML5 display-role reset for older browsers */
 article,
 aside,

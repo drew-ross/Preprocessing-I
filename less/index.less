@@ -46,26 +46,26 @@ time, mark, audio, video {
 
 // Mixins
 
-.border-radius-full {
+.border-radius-full() {
 	border-radius: @border-radius;
 }
 
-.border-radius-top {
+.border-radius-top() {
 	border-radius: @border-radius @border-radius 0 0;
 }
 
-.border-radius-bottom {
+.border-radius-bottom() {
 	border-radius: 0 0 @border-radius @border-radius;
 }
 
-.flex-even {
+.flex-even() {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: flex-start;
 }
 
-.flex-column {
+.flex-column() {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
