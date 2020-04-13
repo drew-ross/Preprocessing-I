@@ -222,6 +222,12 @@ body {
 section {
   margin-bottom: 60px;
 }
+.highlight {
+  color: #E57A70;
+}
+.lowlight {
+  opacity: 0.5;
+}
 .half-container {
   width: 45%;
 }
@@ -327,6 +333,11 @@ header nav ul li a {
     justify-content: center;
   }
 }
+@media (max-width: 375px) {
+  .two-panel .technologies .tech-row {
+    justify-content: space-evenly;
+  }
+}
 .two-panel .technologies .tech-row .tech-name {
   width: 50%;
 }
@@ -343,11 +354,26 @@ header nav ul li a {
   width: 40%;
   padding-right: 10px;
 }
+.two-panel .technologies .tech-row .tech-level .display-small-only {
+  align-self: center;
+  margin: 0;
+  display: none;
+}
+@media (max-width: 375px) {
+  .two-panel .technologies .tech-row .tech-level .display-small-only {
+    display: inline;
+  }
+}
 .two-panel .technologies .tech-row .tech-level .tech {
   margin: 0 2px;
   padding: 10px;
   border: 1px solid #dd5245;
   border-radius: 50%;
+}
+@media (max-width: 375px) {
+  .two-panel .technologies .tech-row .tech-level .tech {
+    display: none;
+  }
 }
 .two-panel .technologies .tech-row .tech-level .point {
   background-color: #E57A70;

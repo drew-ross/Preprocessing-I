@@ -5,7 +5,7 @@ For this project you will be building a digital resume from scratch. You will be
 ## Task 1: Set Up The Project With Git
 
 - [X] Create a forked copy of this project.
-- [ ] Add your project manager as collaborator on Github.
+- [X] Add your project manager as collaborator on Github.
 - [X] Clone your OWN version of the repository (Not Lambda's by mistake!).
 - [X] Create a new branch: git checkout -b `<firstName-lastName>`.
 - [X] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
@@ -14,8 +14,8 @@ For this project you will be building a digital resume from scratch. You will be
 Follow these steps for completing your project.
 
 - [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
-- [ ] Add your project manager as a reviewer on the pull-request
-- [ ] Your project manager will count the project as complete by merging the branch back into master.
+- [X] Add your project manager as a reviewer on the pull-request
+- [O] Your project manager will count the project as complete by merging the branch back into master.
 
 ## Task 2: Set up your preprocessor
 * [X] Verify that you have LESS installed correctly by running `lessc -v` in your terminal, if you don't get a version message back, reach out to your project manager for help.
@@ -42,4 +42,4 @@ Follow these steps for completing your project.
 ## Stretch Goals: 
 * [X] Incorporate a google font of your choosing
 * [?] Convert the great idea CSS into LESS.  Introduce variables, mixins, nesting, etc. 
-* [?] Create a link to the portfolio page and create a layout that would allow users to see your work.  A good idea is to link projects back to their github repos so employers can see your code.
+* [ ] Create a link to the portfolio page and create a layout that would allow users to see your work.  A good idea is to link projects back to their github repos so employers can see your code.
