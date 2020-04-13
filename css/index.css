@@ -112,7 +112,6 @@ video {
   vertical-align: baseline;
 }
 /* Variables */
-/* Mixins */
 .border-radius-full {
   border-radius: 5px;
 }
@@ -226,6 +225,11 @@ section {
 .half-container {
   width: 45%;
 }
+@media (max-width: 800px) {
+  .half-container {
+    width: 100%;
+  }
+}
 .full-container {
   width: 100%;
 }
@@ -242,9 +246,6 @@ section {
   opacity: 0.2;
   border: 1px solid black;
   margin: 40px 0 0 0;
-}
-.hide {
-  display: none;
 }
 header {
   display: flex;
@@ -270,6 +271,11 @@ header nav ul {
   width: 50%;
   margin: 0 auto;
 }
+@media (max-width: 800px) {
+  header nav ul {
+    width: 100%;
+  }
+}
 header nav ul li a {
   font-size: 2rem;
 }
@@ -282,12 +288,25 @@ header nav ul li a {
   justify-content: space-between;
   align-items: flex-start;
 }
+@media (max-width: 800px) {
+  .two-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
 .two-panel .technologies {
   box-shadow: 0px 0px 5px #1D1A31;
   width: 400px;
   overflow: hidden;
   border-radius: 5px;
   background-color: #1D1A31;
+}
+@media (max-width: 920px) {
+  .two-panel .technologies {
+    width: 350px;
+  }
 }
 .two-panel .technologies .odd-row {
   background-color: #151324;
@@ -316,6 +335,7 @@ header nav ul li a {
   padding-right: 10px;
 }
 .two-panel .technologies .tech-row .tech-level .tech {
+  margin: 0 2px;
   padding: 10px;
   border: 1px solid #dd5245;
   border-radius: 50%;
@@ -325,6 +345,7 @@ header nav ul li a {
   border-color: white;
 }
 .two-panel .technologies .tech-row .tech-level .empty {
+  opacity: 0.2;
   background-color: #fdf2f1;
   border-color: #eda29b;
 }

@@ -5,7 +5,9 @@ let aboutLink = document.querySelector("#contact-link");
 let homeLink = document.querySelector("#home-link");
 
 let mainContentDefaultDisplay = mainContent.style.display;
-// let contactContentDefaultDisplay = contactContent.style.display;
+
+//Hide contact info
+contactContent.style.display = "none";
 
 aboutLink.addEventListener('click', function(){
     mainContent.style.display = "none";

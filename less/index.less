@@ -38,7 +38,11 @@ time, mark, audio, video {
 @font-color: white;
 @border-radius: 5px;
 
-/* Mixins */
+// Screen sizes
+
+@screen-tablet-max: 800px;
+
+// Mixins
 
 .border-radius-full {
 	border-radius: @border-radius;
@@ -151,6 +155,10 @@ section {
 
 .half-container {
 	width: 45%;
+
+	@media (max-width: @screen-tablet-max) {
+		width: 100%;
+	}
 }
 
 .full-container {
@@ -174,10 +182,6 @@ section {
 	margin: 40px 0 0 0;
 }
 
-.hide {
-	display: none;
-}
-
 header {
 	.flex-column();
 	margin: 20px 0 80px 0;
@@ -195,7 +199,10 @@ header {
 			.flex-even();
 			width: 50%;
 			margin: 0 auto;
-		
+			@media (max-width: @screen-tablet-max) {
+				width: 100%;
+			}
+
 			li a {
 				font-size: 2rem;
 			}
@@ -210,13 +217,19 @@ header {
 .two-panel {
 	.flex-even();
 
+	@media (max-width: @screen-tablet-max) {
+		.flex-column();
+	}
+
 	.technologies {
 		box-shadow: 0px 0px 5px @shadow-color;
 		width: 400px;
 		overflow: hidden;
 		.border-radius-full();
 		background-color: @row-highlight-color;
-
+		@media (max-width: 920px) {
+			width: 350px;
+		}
 		.odd-row {
 			background-color: darken(@row-highlight-color, 4%);
 		}
@@ -227,7 +240,6 @@ header {
 
 			.tech-name {
 				width: 50%;
-	
 				h3 {
 					margin: 0;
 					width: 100%;
@@ -241,6 +253,7 @@ header {
 				padding-right: 10px;
 	
 				.tech {
+					margin: 0 2px;
 					padding: 10px;
 					border: 1px solid darken(@tech-point-color, 10%);
 					border-radius: 50%;
@@ -252,7 +265,7 @@ header {
 				}
 	
 				.empty {
-					// opacity: 1;
+					opacity: .2;
 					background-color: lighten(@tech-point-color, 30%);
 					border-color: lighten(@tech-point-color, 10%);
 				}
