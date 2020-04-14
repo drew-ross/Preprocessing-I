@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Ubuntu:wght@300;400&display=swap');
+
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -24,6 +26,52 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
+/* Variables */
+
+@color-background: #434156;
+@color-shadow: #1D1A31;
+@color-text-highlight: #E57A70;
+@color-row-highlight: #312e45;
+@font-header: 'Ubuntu', sans-serif;
+@font-text: 'Source Sans Pro', sans-serif;
+@font-color: white;
+@border-radius: 5px;
+
+// Screen sizes
+
+@screen-tablet-max: 800px;
+@screen-mobile-max: 500px;
+@screen-mobile-small-max: 375px;
+
+// Mixins
+
+.border-radius-full() {
+	border-radius: @border-radius;
+}
+
+.border-radius-top() {
+	border-radius: @border-radius @border-radius 0 0;
+}
+
+.border-radius-bottom() {
+	border-radius: 0 0 @border-radius @border-radius;
+}
+
+.flex-even() {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.flex-column() {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -48,12 +96,233 @@ table {
 	border-spacing: 0;
 }
 
-/* Set every element's box-sizing to border-box */
+/* Global Styles */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+	color: @font-color;
+	font-family: @font-text;
 }
 
-html, body {
-    height: 100%;
+
+/* General Styles */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: @font-header;
 }
 
+h1 {
+	font-size: 3rem;
+	margin: 20px 0;
+}
+
+h2 {
+	font-size: 2.2rem;
+	margin: 15px 0;
+}
+
+h3 {
+	font-size: 1.8rem;
+	margin: 10px 0 5px 0;
+}
+
+p, img {
+	font-size: 1.6rem;
+	font-family: @font-text;
+	line-height: 1.4;
+}
+
+a {
+	text-decoration: none;
+	color: @font-color;
+					
+	&:hover {
+		color: @color-text-highlight;
+		}
+}
+/* Page Styles */
+
+body {
+	min-height: 90vh;
+	width: 80%;
+	margin: 0 auto;
+	background: @color-background;
+}
+
+section {
+	margin-bottom: 60px;
+}
+
+.highlight {
+	color: @color-text-highlight;
+}
+
+.lowlight {
+	opacity: .5;
+}
+
+.half-container {
+	width: 45%;
+
+	@media (max-width: @screen-tablet-max) {
+		width: 100%;
+	}
+}
+
+.full-container {
+	width: 100%;
+}
+
+.row {
+	margin: 20px 0;
+
+	.row-company {
+		color: @color-text-highlight;
+	}
+}
+
+.break {
+	display: block;
+	width: 100%;
+	height: 1px;
+	opacity: .2;
+	border: 1px solid black;
+	margin: 40px 0 0 0;
+}
+
+header {
+	.flex-column();
+	margin: 20px 0 80px 0;
+
+	div {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	nav {
+		width: 100%;
+		margin-top: 20px;
+
+		ul {
+			.flex-even();
+			width: 50%;
+			margin: 0 auto;
+			@media (max-width: @screen-tablet-max) {
+				width: 100%;
+			}
+
+			li a {
+				font-size: 2rem;
+			}
+		}
+	}
+}
+
+.main {
+	min-height: calc(100vh - 380px);
+}
+
+.two-panel {
+	.flex-even();
+
+	@media (max-width: @screen-tablet-max) {
+		.flex-column();
+	}
+
+	.technologies {
+		box-shadow: 0px 0px 5px @color-shadow;
+		width: 400px;
+		overflow: hidden;
+		.border-radius-full();
+		
+		@media (max-width: 920px) {
+			width: 350px;
+		}
+		@media (max-width: @screen-mobile-max) {
+			width: 100%;
+		}
+		.odd-row {
+			background-color: @color-row-highlight;
+		}
+
+		.tech-row {
+			.flex-even();
+			padding: 10px 5px;
+			
+			@media (max-width: @screen-mobile-max) {
+				justify-content: center;
+			}
+
+			@media (max-width: @screen-mobile-small-max) {
+				justify-content: space-evenly;
+			}
+
+			.tech-name {
+				width: 50%;
+				h3 {
+					margin: 0;
+					width: 100%;
+					text-align: center;
+				}
+			}
+	
+			.tech-level {
+				.flex-even();
+				width: 40%;
+				padding-right: 10px;
+	
+				.display-small-only {
+					align-self: center;
+					margin: 0;
+					display: none;
+					
+					@media (max-width: @screen-mobile-small-max) {
+						display: inline;
+					}
+				}
+
+				.tech {
+					margin: 0 2px;
+					padding: 10px;
+					border: 1px solid darken(@color-text-highlight, 10%);
+					border-radius: 10%;
+
+					@media (max-width: @screen-mobile-small-max) {
+						display: none;
+					}
+				}
+	
+				.point {
+					background-color: @color-text-highlight;
+					border-color: white;
+				}
+	
+				.empty {
+					opacity: .2;
+					background-color: lighten(@color-text-highlight, 30%);
+					border-color: lighten(@color-text-highlight, 10%);
+				}
+			}
+		}
+	}
+}
+
+.contact-content {
+	text-align: center;
+
+	a {
+		font-size: 1.8rem;
+	}
+}
+
+footer {
+	width: 100%;
+	margin: 50px 0;
+	text-align: center;
+
+	small {
+		font-size: 1.5rem;
+	}
+}
